@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"><head>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+</head>
+<body>
+    <div>
+        <form method="POST" th:action="@{/user}" th:object="${user}">
+            <h1>Sign in to take part in Curricula</h1>
+
+        <div th:if="${#fields.hasErrors()}">
+            <span class="validationError">
+            Please correct the problems below and resubmit.
+            </span>
+        </div>
+            <h3>User name</h3>
+            <label for="userName">Name: </label>
+            <input type="text" th:field="*{userName}"/>
+            <span class="validationError"
+                  th:if="${#fields.hasErrors('userName')}"
+                  th:errors="*{userName}">Name Error</span>
+            <br/>
+    </div>
+    <div>
+        <h3>Enter Password</h3>
+        <label for="password">Name: </label>
+        <input type="text" th:field="*{password}"/>
+        <span class="validationError"
+              th:if="${#fields.hasErrors('password')}"
+              th:errors="*{password}">Name Error</span>
+        <br/>
+
+    </div>
+
+
+        </form>
+    </div>
+
+</body>
+</html>

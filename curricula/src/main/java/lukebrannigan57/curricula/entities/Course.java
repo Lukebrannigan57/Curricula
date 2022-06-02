@@ -7,7 +7,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class Course {
     private final int id;
-    private final String name;
+    private final String courseName;
     private final Subject subject;
     private final String description;
     private final Instructor instructor;

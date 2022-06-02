@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Create Class</title>
+</head>
+<body>
+    <div>
+        <div>
+            <h3>Create a name for this course</h3>
+            <label for="courseName">Name: </label>
+            <input type="text" th:field="*{courseName}"/>
+            <span class="validationError"
+                  th:if="${#fields.hasErrors('courseName')}"
+                  th:errors="*{courseName}">Name Error</span>
+            <br/>
+        </div>
+        <div>
+            <h3>Create a subject for this course</h3>
+            <label for="subject">Subject: </label>
+            <input type="text" th:field="*{subject}"/>
+            <span class="validationError"
+                  th:if="${#fields.hasErrors('subject')}"
+                  th:errors="*{subject}">Name Error</span>
+            <br/>
+
+        </div>
+        <div>
+            <h3>Create a description for your course</h3>
+            <label for="description">Description: </label>
+            <input type="text" th:field="*{description}"/>
+            <span class="validationError"
+                  th:if="${#fields.hasErrors('description')}"
+                  th:errors="*{description}">Name Error</span>
+            <br/>
+
+        </div>
+        <!--will you be teaching this course? y/n-->
+        <!--<div>
+            <h3>Enter the name of the instructor</h3>
+            <label for="firstName">Name: </label>
+            <input type="text" th:field="*{firstName}"/>
+            <span class="validationError"
+                  th:if="${#fields.hasErrors('firstName')}"
+                  th:errors="*{firstName}">Name Error</span>
+            <br/>
+
+        </div>-->
+        <div>
+            <h3>When does the course begin?</h3>
+            <label for="startDate">Start Date: </label>
+            <input type="text" th:field="*{startDate}"/>
+            <span class="validationError"
+                  th:if="${#fields.hasErrors('startDate')}"
+                  th:errors="*{startDate}">Name Error</span>
+            <br/>
+
+        </div>
+        <div>
+            <h3>When does the course End?</h3>
+            <label for="endDate">End Date: </label>
+            <input type="text" th:field="*{endDate}"/>
+            <span class="validationError"
+                  th:if="${#fields.hasErrors('endDate')}"
+                  th:errors="*{endDate}">Name Error</span>
+            <br/>
+            <!--indefinite checkbox-->
+
+        </div>
+
+    </div>
+
+</body>
+</html>

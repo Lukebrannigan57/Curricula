@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+</head>
+<body>
+    <div>
+        <form method="POST" th:action="@{/user}" th:object="${user}">
+            <h1>Sign up to take part in Curricula</h1>
+            <div th:if="${#fields.hasErrors()}">
+                <span class="validationError">
+                Please correct the problems below and resubmit.
+                </span>
+            </div>
+            <div>
+            <h3>Create a user name</h3>
+                <label for="userName">Name: </label>
+                <input type="text" th:field="*{userName}"/>
+                <span class="validationError"
+                      th:if="${#fields.hasErrors('userName')}"
+                      th:errors="*{userName}">Name Error</span>
+                <br/>
+            </div>
+            <div>
+                <h3>Enter Password</h3>
+                <label for="password">Password: </label>
+                <input type="text" th:field="*{password}"/>
+                <span class="validationError"
+                      th:if="${#fields.hasErrors('password')}"
+                      th:errors="*{password}">Name Error</span>
+                <br/>
+
+            </div>
+            <div>
+                <h3>Confirm Password</h3>
+                <label for="password">Confirm Password </label>
+                <input type="text" th:field="*{password}"/>
+                <span class="validationError"
+                      th:if="${#fields.hasErrors('password')}"
+                      th:errors="*{password}">Name Error</span>
+                <br/>
+
+            </div>
+            <div>
+                <h3>First name</h3>
+                <label for="firstName">First Name: </label>
+                <input type="text" th:field="*{firstName}"/>
+                <span class="validationError"
+                      th:if="${#fields.hasErrors('firstName')}"
+                      th:errors="*{firstName}">Name Error</span>
+                <br/>
+
+            </div>
+            <div>
+                <h3>Last name</h3>
+                <label for="lastName">Last Name: </label>
+                <input type="text" th:field="*{lastName}"/>
+                <span class="validationError"
+                      th:if="${#fields.hasErrors('lastName')}"
+                      th:errors="*{lastName}">Name Error</span>
+                <br/>
+
+            </div>
+            <div>
+                <h3>Email Address</h3>
+                <label for="email">Email: </label>
+                <input type="text" th:field="*{email}"/>
+                <span class="validationError"
+                      th:if="${#fields.hasErrors('email')}"
+                      th:errors="*{email}">Name Error</span>
+                <br/>
+
+            </div>
+            <div>
+                <h3>Phone number</h3>
+                <label for="phone">Phone: </label>
+                <input type="text" th:field="*{phone}"/>
+                <span class="validationError"
+                      th:if="${#fields.hasErrors('phone')}"
+                      th:errors="*{phone}">Name Error</span>
+                <br/>
+
+            </div>
+            <div>
+                <h3>Address line 1</h3>
+                <label for="address1">Address Line 1: </label>
+                <input type="text" th:field="*{address1}"/>
+                <span class="validationError"
+                      th:if="${#fields.hasErrors('address1')}"
+                      th:errors="*{address1}">Name Error</span>
+                <br/>
+
+            </div>
+            <div>
+                <h3>Address line 2</h3>
+                <label for="address2">Address Line 2: </label>
+                <input type="text" th:field="*{address2}"/>
+                <span class="validationError"
+                      th:if="${#fields.hasErrors('address2')}"
+                      th:errors="*{address2}">Name Error</span>
+                <br/>
+
+            </div>
+            <div>
+                <h3>City</h3>
+                <label for="city">City: </label>
+                <input type="text" th:field="*{city}"/>
+                <span class="validationError"
+                      th:if="${#fields.hasErrors('city')}"
+                      th:errors="*{city}">Name Error</span>
+                <br/>
+
+            </div>
+            <div>
+                <h3>State</h3>
+                <label for="state">State: </label>
+                <input type="text" th:field="*{state}"/>
+                <span class="validationError"
+                      th:if="${#fields.hasErrors('state')}"
+                      th:errors="*{state}">Name Error</span>
+                <br/>
+
+            </div>
+            <div>
+                <h3>Zip code</h3>
+                <label for="zip">Zip code: </label>
+                <input type="text" th:field="*{zip}"/>
+                <span class="validationError"
+                      th:if="${#fields.hasErrors('zip')}"
+                      th:errors="*{zip}">Name Error</span>
+                <br/>
+
+            </div>
+
+
+            <!--
+            <h3>Are you signing up as a teacher or as a student?</h3>
+            so can you be a student and a teacher?
+            <h4>I'm just here to learn</h4>
+            <h4>I'm just here to teach</h4>-->
+
+
+
+
+        </form>
+
+    </div>
+
+</body>
+</html>

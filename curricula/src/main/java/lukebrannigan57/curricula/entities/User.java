@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 public class User {
     private final int id;
     private final String userName;
+    private final String password;
     private final String firstName;
     private final String lastName;
     private final String email;
@@ -16,7 +17,7 @@ public class User {
     private final String address2;
     private final String city;
     private final String state;
-    private final String title;
     private final String zip;
+    private final String role;
 
 }

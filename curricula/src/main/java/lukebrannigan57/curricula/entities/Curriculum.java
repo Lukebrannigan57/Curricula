@@ -12,5 +12,7 @@ public class Curriculum {
     private final String name;
     private final Subject subject;
     private final List<Course> courses;
+    // curriculum is mostly made up of courses, and start/end dates
+    // a course could be used in multiple curriculum
 
 }
